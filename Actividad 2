@@ -1,0 +1,52 @@
+void main() {
+
+final vehiculo = Vehiculo();
+
+print(vehiculo.id); 
+vehiculo.id = "BMW";
+print("Marca del vehiculo:");
+print(vehiculo.id);
+print("\n");
+
+vehiculo.precio = 50000;
+print("Precio del vehiculo:");
+print(vehiculo.precio);
+print("\n");
+
+print("Dueño:");
+vehiculo.dueno = "Pepe";
+print(vehiculo.dueno);
+print("\n");
+if(vehiculo.mensualidades){
+print("Mensualidades diponibles");
+          }
+else{
+print("Mensualidades no diponibles");
+         }
+print("\n");
+
+
+print(vehiculo);
+
+vehiculo.arranca("");
+vehiculo.frena("");
+
+}
+
+class Vehiculo{
+  String id = "";
+  String dueno = "";
+  int precio = 0;
+  bool mensualidades = false;
+  @override
+  String toString(){
+    return "Soy $dueno con el vehiculo $id";
+  }
+
+  void arranca(String arranca){
+    print("Yo arranco $arranca \n");
+  }
+  void frena(String frena){
+    print("Yo freno $frena \n :)");
+  }
+}
